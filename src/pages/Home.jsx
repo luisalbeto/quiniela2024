@@ -1,9 +1,18 @@
 import { useEffect } from "react"
 import { client } from "../supabase/client"
+import { useNavigate } from "react-router-dom";
 
 
 
-export const Home = () => {
+
+export function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!client.auth.getUser()) {
+      navigate("/Login");
+    }
+  }, [navigate]);
   return(
     <div>
       Home
@@ -15,3 +24,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home

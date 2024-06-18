@@ -1,6 +1,5 @@
-import React from 'react';
 
-const Logo = () => {
+export const Logo = () => {
   return (
     
       <img className="cursor-pointer"
@@ -9,4 +8,3 @@ const Logo = () => {
 };
 
 
-export default Logo;
