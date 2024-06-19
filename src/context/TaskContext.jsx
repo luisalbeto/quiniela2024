@@ -18,7 +18,7 @@ export const TaskContextProvider = ({ children }) => {
     setLoading(true);
     
     try {
-      const { error } = await client.auth.signIn({ email });
+      const { error } = await client.auth.signInWithOtp({ email });
       if (error) {
         throw error;
       }
