@@ -8,6 +8,7 @@ import { Nav } from "./components/Nav"
 import { Footer } from "./components/Footer"
 import { TaskContextProvider } from "./context/TaskContext";
 import { AuthProvider } from "./context/AuthContext";
+import Predictions from "./pages/Predictions"
 
 
 
@@ -27,13 +28,14 @@ function App() {
 
   return (
     <>
-    <AuthProvider>
+   <AuthProvider>
       <TaskContextProvider>
         <Nav/>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="/Predictions" element={<Predictions/>}/>
           </Routes>
         <Footer/> 
      </TaskContextProvider>

@@ -13,6 +13,7 @@ export const useTasks = () => {
 
 export const TaskContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
+ 
   const loginWithMagicLink = async (email) => {
     
     setLoading(true);
@@ -22,7 +23,7 @@ export const TaskContextProvider = ({ children }) => {
       if (error) {
         throw error;
       }
-      alert("check your email for the magic link");
+      alert("Revisa tu correo para iniciar sesion con el Magic Link");
     } catch (error) {
       alert(error.message);
     } finally {
