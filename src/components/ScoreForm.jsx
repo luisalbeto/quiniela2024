@@ -27,20 +27,21 @@ function ScoreForm () {
    
     }
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input 
+        <div className="bg-green/400 rounded-lg shadow p-4 w-64 mx-auto mt-8">
+            <form onSubmit={handleSubmit}
+                    className="flex items-center justify-center space-x-4">
+                <input
+                    className="w-10 h-10 text-3xl text-black bg-white rounded-lg text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50" 
                     type="number" 
-                    placeholder="Local"
+                    placeholder="0"
                     onChange={(e) => setLocalScore(e.target.value)} />
-                <input 
+                <input
+                    className="w-10 h-10 text-3xl text-black bg-white rounded-lg text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50"
                     type="number" 
-                    placeholder="Visitor"
+                    placeholder="0"
                     onChange={(e) => setVisitorScore(e.target.value)} />
 
-                    <button>
-                        Add
-                    </button>
+                    
             </form>
         </div>
 

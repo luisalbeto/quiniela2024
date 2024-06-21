@@ -3,6 +3,7 @@ import { client } from "../supabase/client"
 import { Logo } from "../components/Logo"
 import { useTasks } from "../context/TaskContext";
 import { useNavigate } from "react-router-dom";
+import { Quiniela } from "./Quiniela";
 
 export function Login() {
 	const [email, setEmail] = useState("");
@@ -27,6 +28,7 @@ export function Login() {
 <main 
 	className="
 		min-h-screen
+		min-w-screen
 		flex 
 		items-center 
 		justify-center 
@@ -61,7 +63,9 @@ export function Login() {
             </div>
           </form>
         </div>
+
       </main>
+
 
 			
 

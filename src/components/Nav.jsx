@@ -6,7 +6,7 @@ export const Nav = () => {
     <div 
       className="
         w-full bg-gradient-to-b 
-		    from-yellow 
+		    from-lila 
 		    to-sky">
       <div className="py-5 border-b-[5]">
       <Container>

@@ -8,7 +8,7 @@ import { Nav } from "./components/Nav"
 import { Footer } from "./components/Footer"
 import { TaskContextProvider } from "./context/TaskContext";
 import { AuthProvider } from "./context/AuthContext";
-import Predictions from "./pages/Predictions"
+import Quiniela from "./pages/Quiniela"
 
 
 
@@ -20,23 +20,23 @@ function App() {
     client.auth.onAuthStateChange((_event, session) => {
       if (!session) {
         navigate("/Login");
-      } else {
-        navigate("/");
       }
     });
-  }, [navigate]);
+  }, [navigate])
 
   return (
     <>
    <AuthProvider>
       <TaskContextProvider>
         <Nav/>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/Login" element={<Login/>}/>
-            <Route path="*" element={<NotFound/>}/>
-            <Route path="/Predictions" element={<Predictions/>}/>
-          </Routes>
+          <div className="container">
+            <Routes >
+              <Route path="/" element={<Home/>}/>
+              <Route path="/Login" element={<Login/>}/>
+              <Route path="*" element={<NotFound/>}/>
+              <Route path="/Quiniela" element={<Quiniela/>}/>
+            </Routes>
+          </div>
         <Footer/> 
      </TaskContextProvider>
     </AuthProvider>

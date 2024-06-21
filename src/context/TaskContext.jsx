@@ -13,6 +13,7 @@ export const useTasks = () => {
 
 export const TaskContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
+
  
   const loginWithMagicLink = async (email) => {
     
@@ -44,8 +45,6 @@ export const TaskContextProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
-  
 
   return (
     <TaskContext.Provider

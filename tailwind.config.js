@@ -23,6 +23,7 @@ export default {
       'wine': '#B30090',
       'lila': '#AE0BFF',
       'transparent': '#00000000',
+      'turquesa': '#00FF66'
     },
   },
   plugins: [],
