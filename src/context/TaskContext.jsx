@@ -22,7 +22,7 @@ export const TaskContextProvider = ({ children }) => {
       if (error) {
         throw error;
       }
-      alert("check your email for the magic link");
+      alert("Revisa tu Correo e inicia sesion con el enlace de registro");
     } catch (error) {
       alert(error.message);
     } finally {

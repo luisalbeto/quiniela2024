@@ -31,8 +31,8 @@ export function Login() {
 		items-center 
 		justify-center 
 		bg-gradient-to-b 
-		from-blue 
-		to-sky">
+		from-sky 
+		to-blue">
         <div className="w-full md:w-1/2 bg-white p-8 rounded shadow">
 		<div className="flex items-center justify-center">
 			<Logo />   
