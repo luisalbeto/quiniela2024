@@ -10,29 +10,21 @@ function ScoreForm () {
         e.preventDefault()
 
         try{
-            const { user } = await client.auth.getUser();
-            if (!user) {
-                throw new Error('Usuario no autenticado');
-            }
-
-            const result = await client
-        .from('predictions')
-        .insert({
-            local_score: localScore,
-            visitor_score: visitorScore,
-            userId: user.id  // Acceder directamente a la propiedad 'id' del objeto 'user'
-        });
-
+            const user = await client.auth.getUser()
             console.log(user)
-          
-           console.log(result)
+            
+          const result = await client.from("scores").insert({
+                local_score: localScore,
+                visitor_score: visitorScore,
+                userId: user.data.user.id
+            })
+                     
+          console.log(result)
 
         }catch(error) {
             console.error(error, error.message)
         }
-
-       
-        
+   
     }
     return(
         <div>

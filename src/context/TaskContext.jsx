@@ -23,7 +23,7 @@ export const TaskContextProvider = ({ children }) => {
       if (error) {
         throw error;
       }
-      alert("Revisa tu correo para iniciar sesion con el Magic Link");
+      alert("Revisa tu correo e inicia sesion a través del Magic Link");
     } catch (error) {
       alert(error.message);
     } finally {
