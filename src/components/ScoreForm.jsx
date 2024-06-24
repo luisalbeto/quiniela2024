@@ -20,6 +20,8 @@ function ScoreForm () {
             })
                      
           console.log(result)
+          alert("Marcador Agreado!");
+
 
         }catch(error) {
             console.error(error, error.message)
@@ -27,21 +29,20 @@ function ScoreForm () {
    
     }
     return(
-        <div className="bg-green/400 rounded-lg shadow p-4 w-64 mx-auto mt-8">
+        <div className="bg-brick rounded-lg shadow p-4 w-40 mx-auto mt-8">
             <form onSubmit={handleSubmit}
                     className="flex items-center justify-center space-x-4">
                 <input
-                    className="w-10 h-10 text-3xl text-black bg-white rounded-lg text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50" 
+                    className="w-10 h-10 text-3xl text-black bg-white rounded-full text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50" 
                     type="number" 
                     placeholder="0"
                     onChange={(e) => setLocalScore(e.target.value)} />
                 <input
-                    className="w-10 h-10 text-3xl text-black bg-white rounded-lg text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50"
+                    className="w-10 h-10 text-3xl text-black bg-white rounded-full text-center font-bold outline-none focus:ring-2 focus:ring-blue/50 focus:ring-opacity-50"
                     type="number" 
                     placeholder="0"
                     onChange={(e) => setVisitorScore(e.target.value)} />
-
-                    
+                    <button className="bg-blue text-white py-1 px-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue/50">Add</button>
             </form>
         </div>
 

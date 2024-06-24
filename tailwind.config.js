@@ -25,6 +25,11 @@ export default {
       'transparent': '#00000000',
       'turquesa': '#00FF66'
     },
+    fontFamily: {
+      'newJune': ['newJune'],
+     
+    },
+
   },
   plugins: [],
 }

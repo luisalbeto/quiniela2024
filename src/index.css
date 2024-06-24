@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'newJune';
+    src: url('./fonts/neue-june/Matt\ Chansky\ -\ Neue\ June\ Bold.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

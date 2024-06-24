@@ -1,14 +1,21 @@
 import { Routes, Route, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+
 import { Login } from "./pages/Login"
 import { Home } from "./pages/Home"
+import { Quiniela } from "./pages/Quiniela"
 import { NotFound } from "./pages/NotFound"
-import { useEffect } from "react"
+
 import { client } from "./supabase/client"
+
 import { Nav } from "./components/Nav"
 import { Footer } from "./components/Footer"
+import { ScoreList }  from "./components/ScoreList"
+
+
 import { TaskContextProvider } from "./context/TaskContext";
 import { AuthProvider } from "./context/AuthContext";
-import Quiniela from "./pages/Quiniela"
+import { MyScores } from "./pages/MyScores"
 
 
 
@@ -35,9 +42,11 @@ function App() {
               <Route path="/Login" element={<Login/>}/>
               <Route path="*" element={<NotFound/>}/>
               <Route path="/Quiniela" element={<Quiniela/>}/>
+              <Route path="/MyScores" element={<MyScores/>}/>
+
             </Routes>
           </div>
-        <Footer/> 
+        <Footer/>
      </TaskContextProvider>
     </AuthProvider>
          

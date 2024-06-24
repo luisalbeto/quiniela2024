@@ -13,6 +13,18 @@ export const useTasks = () => {
 
 export const TaskContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
+  const [ task, setTask ] = useState([]) 
+
+  const user = client.auth.getUser()
+  console.log(user)
+  
+
+  const getTasks = async () => {
+    const result = await client.from('scores').select().eq('userId', (await user).data.user.id)
+    console.log(result)
+
+  }
+
 
  
   const loginWithMagicLink = async (email) => {
@@ -46,12 +58,17 @@ export const TaskContextProvider = ({ children }) => {
     }
   };
 
+ 
+
+
   return (
     <TaskContext.Provider
       value={{
+        task,
         loginWithMagicLink,
         loading,
-        logout
+        logout,
+        getTasks
       }}
     >
       {children}
