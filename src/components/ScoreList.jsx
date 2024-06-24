@@ -2,12 +2,17 @@ import { useTasks } from '../context/TaskContext'
 import { useEffect } from 'react'
 
 export function ScoreList() {
-  const { task, getTasks } = useTasks()
+  const { scores, getScores, getMatches } = useTasks()
+  console.log(scores)
   useEffect(() => {
-    getTasks()
+    getMatches()
+    getScores()
   },[])
 
-  return<div>Scores List</div>
+  return(
+  <div>
+    
+  </div>)
 }
 
 export default ScoreList

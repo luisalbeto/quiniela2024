@@ -11,17 +11,14 @@ function ScoreForm () {
 
         try{
             const user = await client.auth.getUser()
-            console.log(user)
-            
-          const result = await client.from("scores").insert({
+            const result = await client.from("scores").insert({
                 local_score: localScore,
                 visitor_score: visitorScore,
-                userId: user.data.user.id
+                userId: user.data.user.id,
             })
                      
           console.log(result)
-          alert("Marcador Agreado!");
-
+          alert("Marcador Agregado!");
 
         }catch(error) {
             console.error(error, error.message)
@@ -29,7 +26,7 @@ function ScoreForm () {
    
     }
     return(
-        <div className="bg-brick rounded-lg shadow p-4 w-40 mx-auto mt-8">
+        <div className="bg-brick rounded-lg shadow p-4 w-50 mx-auto mt-8">
             <form onSubmit={handleSubmit}
                     className="flex items-center justify-center space-x-4">
                 <input
@@ -42,12 +39,10 @@ function ScoreForm () {
                     type="number" 
                     placeholder="0"
                     onChange={(e) => setVisitorScore(e.target.value)} />
-                    <button className="bg-blue text-white py-1 px-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue/50">Add</button>
+                    <button className="bg-blue text-white py-1 px-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue/50">save</button>
             </form>
         </div>
-
     )
-
 }
 
 export default ScoreForm
